@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,21 +13,36 @@ namespace NotepadMDI
 {
     public partial class MainForm : Form
     {
-        public int OpenDocuments;
+        private HashSet<int> UntitledNums = new HashSet<int>();
+        private FindForm findForm;
+
+        public int GetFreeUntitledNum()
+        {
+            int i;
+            for (i = 1; i < UntitledNums.Count + 1; i++)
+            {
+                if (!UntitledNums.Contains(i))
+                {
+                    break;
+                }
+            }
+
+            UntitledNums.Add(i);
+            return i;
+        }
+
+        public void SetFreeUntitledNum(string docName)
+        {
+            string[] splitDocName = docName.Split(' ');
+            int num = Convert.ToInt32(splitDocName[splitDocName.Length - 1]);
+            UntitledNums.Remove(num);
+        }
+
         public MainForm()
         {
             InitializeComponent();
             saveToolStripMenuItem.Enabled = false;
-        }
-
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Blank frm = new Blank();
-            frm.DocName = "Untitled " + ++OpenDocuments;
-            frm.Text = frm.DocName;
-            frm.MdiParent = this;
-            frm.WindowState = FormWindowState.Maximized;
-            frm.Show();
+            findForm = new FindForm();
         }
 
         private void arrangeItemsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -79,6 +95,18 @@ namespace NotepadMDI
             frm.SelectAll();
         }
 
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Blank frm = new Blank();
+            frm.DocName = "Untitled " + GetFreeUntitledNum();
+            frm.Text = frm.DocName;
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.RefreshAmount();
+            frm.Show();
+            findForm.Editor = frm.RichTextBox;
+        }
+
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -88,31 +116,48 @@ namespace NotepadMDI
                 frm.MdiParent = this;
                 frm.DocName = openFileDialog1.FileName;
                 frm.Text = frm.DocName;
+                frm.WasSaved = true;
+                frm.RefreshAmount();
                 frm.Show();
                 saveToolStripMenuItem.Enabled = true;
+                findForm.Editor = frm.RichTextBox;
             }
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Save();
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveAs();
+        }
+
+        public void Save()
         {
             Blank frm = (Blank)ActiveMdiChild;
             frm.Save(frm.DocName);
             frm.IsSaved = true;
         }
 
-        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        public void SaveAs()
         {
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 Blank frm = (Blank)ActiveMdiChild;
                 frm.Save(saveFileDialog1.FileName);
+                if (!frm.WasSaved)
+                {
+                    SetFreeUntitledNum(frm.DocName);
+                }
                 frm.DocName = saveFileDialog1.FileName;
                 frm.Text = saveFileDialog1.FileName;
                 saveToolStripMenuItem.Enabled = true;
+                frm.WasSaved = true;
                 frm.IsSaved = true;
             }
         }
-
 
         private void fontToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -151,11 +196,7 @@ namespace NotepadMDI
 
         private void findToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FindForm findForm = new FindForm();
-            if (findForm.ShowDialog(this) == DialogResult.Cancel) return;
-
-            Blank blank = (Blank)ActiveMdiChild;
-            blank.Find(findForm.FindText, findForm.FindCondition);
+            findForm.Show();
         }
 
         private void toolStripMain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -172,7 +213,14 @@ namespace NotepadMDI
 
             if (e.ClickedItem.Equals(tbSave))
             {
-                saveToolStripMenuItem_Click(this, EventArgs.Empty);
+                if (((Blank)ActiveMdiChild).WasSaved)
+                {
+                    Save();
+                }
+                else
+                {
+                    SaveAs();
+                }
             }
 
             if (e.ClickedItem.Equals(tbCut))

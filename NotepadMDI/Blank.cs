@@ -1,6 +1,8 @@
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace NotepadMDI
@@ -10,6 +12,7 @@ namespace NotepadMDI
         public string DocName { get; set; }
         public string BufferText = "";
         public bool IsSaved = false;
+        public bool WasSaved = false;
 
         public Font TextFont
         {
@@ -23,16 +26,17 @@ namespace NotepadMDI
             set => richTextBox.SelectionColor = value;
         }
 
+        public RichTextBox RichTextBox
+        {
+            get => richTextBox;
+            set => richTextBox = value;
+        }
+
         public Blank()
         {
             InitializeComponent();
             sbTime.Text = DateTime.Now.ToLongTimeString();
             sbTime.ToolTipText = DateTime.Today.ToLongDateString();
-        }
-
-        public void Find(string text, RichTextBoxFinds richTextBoxFinds)
-        {
-            richTextBox.Find(text, richTextBoxFinds);
         }
 
         public void Cut()
@@ -110,13 +114,33 @@ namespace NotepadMDI
             if (!IsSaved && MessageBox.Show(message, "Message", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Save(DocName);
+                if (WasSaved)
+                {
+                    ((MainForm) MdiParent).Save();
+                }
+                else
+                {
+                    ((MainForm) MdiParent).SaveAs();
+                }
             }
         }
 
         private void richTextBox_TextChanged(object sender, EventArgs e)
         {
+            RefreshAmount();
+        }
+
+        public void RefreshAmount()
+        {
             sbAmount.Text = $"Amount of symbols {richTextBox.Text.Length}";
+        }
+
+        private void Blank_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!WasSaved)
+            {
+                ((MainForm) MdiParent).SetFreeUntitledNum(DocName);
+            }
         }
     }
 }
