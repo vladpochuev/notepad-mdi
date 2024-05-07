@@ -160,7 +160,6 @@ namespace NotepadMDI
         private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-
         private System.Windows.Forms.RichTextBox richTextBox;
 
         #endregion

@@ -9,21 +9,76 @@ namespace NotepadMDI
 {
     public partial class MainForm : Form
     {
-        private HashSet<int> UntitledNums = new HashSet<int>();
+        private HashSet<int> UntitledNums { get; set; }
 
-        public int GetFreeUntitledNum()
+        public MainForm()
+        {
+            InitializeComponent();
+            UntitledNums = new HashSet<int>();
+        }
+
+        private void Save()
+        {
+            Blank blank = (Blank)ActiveMdiChild;
+            blank.WriteFile(blank.DocName);
+            blank.IsSaved = true;
+        }
+
+        private void Open()
+        {
+            if (openFileDialog1.ShowDialog() != DialogResult.OK) return;
+
+            Blank blank = new Blank();
+            blank.MdiParent = this;
+            blank.DocName = openFileDialog1.FileName;
+            blank.Text = blank.DocName;
+            blank.WasSaved = true;
+            blank.ReadFile(openFileDialog1.FileName);
+            blank.RefreshAmount();
+            blank.Show();
+            saveToolStripMenuItem.Enabled = true;
+        }
+
+        private void CreateNew()
+        {
+            Blank blank = new Blank();
+            blank.DocName = "Untitled " + GetFreeUntitledNum();
+            blank.Text = blank.DocName;
+            blank.MdiParent = this;
+            blank.WindowState = FormWindowState.Maximized;
+            blank.RefreshAmount();
+            blank.Show();
+        }
+
+        private int GetFreeUntitledNum()
         {
             int i;
             for (i = 1; i < UntitledNums.Count + 1; i++)
             {
-                if (!UntitledNums.Contains(i))
-                {
-                    break;
-                }
+                if (!UntitledNums.Contains(i)) break;
             }
 
             UntitledNums.Add(i);
             return i;
+        }
+
+        private void SaveAs()
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Blank blank = (Blank)ActiveMdiChild;
+                blank.WriteFile(saveFileDialog1.FileName);
+                if (!blank.WasSaved)
+                {
+                    SetFreeUntitledNum(blank.DocName);
+                }
+
+                blank.DocName = saveFileDialog1.FileName;
+                blank.Text = saveFileDialog1.FileName;
+                saveToolStripMenuItem.Enabled = true;
+                blank.WasSaved = true;
+                blank.IsSaved = true;
+            }
         }
 
         public void SetFreeUntitledNum(string docName)
@@ -33,237 +88,71 @@ namespace NotepadMDI
             UntitledNums.Remove(num);
         }
 
-        public MainForm()
+        private void ShowFontDialog()
         {
-            InitializeComponent();
-            saveToolStripMenuItem.Enabled = false;
-        }
-
-        private void arrangeItemsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.ArrangeIcons);
-        }
-
-        private void cascadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.Cascade);
-        }
-
-        private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileHorizontal);
-        }
-
-        private void tileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileVertical);
-        }
-
-        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Blank frm = (Blank)ActiveMdiChild;
-            frm.Cut();
-        }
-
-        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Blank frm = (Blank)ActiveMdiChild;
-            frm.Copy();
-        }
-
-        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Blank frm = (Blank)ActiveMdiChild;
-            frm.Paste();
-        }
-
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Blank frm = (Blank)ActiveMdiChild;
-            frm.Delete();
-        }
-
-        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Blank frm = (Blank)ActiveMdiChild;
-            frm.SelectAll();
-        }
-
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Blank frm = new Blank();
-            frm.DocName = "Untitled " + GetFreeUntitledNum();
-            frm.Text = frm.DocName;
-            frm.MdiParent = this;
-            frm.WindowState = FormWindowState.Maximized;
-            frm.RefreshAmount();
-            frm.Show();
-
-        }
-
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                Blank frm = new Blank();
-                frm.Open(openFileDialog1.FileName);
-                frm.MdiParent = this;
-                frm.DocName = openFileDialog1.FileName;
-                frm.Text = frm.DocName;
-                frm.WasSaved = true;
-                frm.RefreshAmount();
-                frm.Show();
-                saveToolStripMenuItem.Enabled = true;
-            }
-        }
-
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Save();
-        }
-
-        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveAs();
-        }
-
-        public void Save()
-        {
-            Blank frm = (Blank)ActiveMdiChild;
-            frm.Save(frm.DocName);
-            frm.IsSaved = true;
-        }
-
-        public void SaveAs()
-        {
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                Blank frm = (Blank)ActiveMdiChild;
-                frm.Save(saveFileDialog1.FileName);
-                if (!frm.WasSaved)
-                {
-                    SetFreeUntitledNum(frm.DocName);
-                }
-                frm.DocName = saveFileDialog1.FileName;
-                frm.Text = saveFileDialog1.FileName;
-                saveToolStripMenuItem.Enabled = true;
-                frm.WasSaved = true;
-                frm.IsSaved = true;
-            }
-        }
-
-        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Blank frm = (Blank)ActiveMdiChild;
-            fontDialog1.ShowColor = false;
-            fontDialog1.Font = frm.TextFont;
-            fontDialog1.Color = frm.TextColor;
+            Blank blank = (Blank)ActiveMdiChild;
+            if (blank == null) return;
+            fontDialog1.Font = blank.TextFont;
 
             if (fontDialog1.ShowDialog() == DialogResult.OK)
             {
-                frm.TextFont = fontDialog1.Font;
-                frm.TextColor = fontDialog1.Color;
+                blank.TextFont = fontDialog1.Font;
             }
-
-            frm.Show();
         }
 
-
-        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ShowColorDialog()
         {
-            Blank frm = (Blank)ActiveMdiChild;
-            colorDialog1.Color = frm.TextColor;
+            Blank blank = (Blank)ActiveMdiChild;
+            if (blank == null) return;
+            colorDialog1.Color = blank.TextColor;
 
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
-                frm.TextColor = colorDialog1.Color;
-            }
-
-            frm.Show();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void findToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FindForm findForm = new FindForm();
-            findForm.Editor = ((Blank)ActiveMdiChild)?.RichTextBox;
-            findForm.Show();
-        }
-
-        private void toolStripMain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            if (e.ClickedItem.Equals(tbNew))
-            {
-                newToolStripMenuItem_Click(this, EventArgs.Empty);
-            }
-
-            if (e.ClickedItem.Equals(tbOpen))
-            {
-                openToolStripMenuItem_Click(this, EventArgs.Empty);
-            }
-
-            if (e.ClickedItem.Equals(tbSave))
-            {
-                if (((Blank)ActiveMdiChild).WasSaved)
-                {
-                    Save();
-                }
-                else
-                {
-                    SaveAs();
-                }
-            }
-
-            if (e.ClickedItem.Equals(tbCut))
-            {
-                cutToolStripMenuItem_Click(this, EventArgs.Empty);
-            }
-
-            if (e.ClickedItem.Equals(tbCopy))
-            {
-                copyToolStripMenuItem_Click(this, EventArgs.Empty);
-            }
-
-            if (e.ClickedItem.Equals(tbPaste))
-            {
-                pasteToolStripMenuItem_Click(this, EventArgs.Empty);
+                blank.TextColor = colorDialog1.Color;
             }
         }
 
-        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        public void SaveOrSaveAs(bool wasSaved)
         {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-            Controls.Remove(miniToolStrip);
-            Controls.Remove(toolStripMain);
+            if (wasSaved) Save();
+            else SaveAs();
+        }
+
+        private void ChangeLanguage(string lang)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+            RefreshForm();
+            CheckLanguageItem(lang);
+        }
+
+        private void RefreshForm()
+        {
+            RemoveUiControls();
             InitializeComponent();
-            foreach (var mdiChild in MdiChildren)
-            {
-                ((Blank)mdiChild).RefreshAmount();
-            }
-            englishToolStripMenuItem.Checked = true;
-            ukrainianToolStripMenuItem.Checked = false;
+            RefreshChildForms();
             WindowState = FormWindowState.Normal;
             WindowState = FormWindowState.Maximized;
         }
 
-        private void ukrainianToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RemoveUiControls()
         {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("uk");
             Controls.Remove(miniToolStrip);
             Controls.Remove(toolStripMain);
-            InitializeComponent();
+        }
+
+        private void RefreshChildForms()
+        {
             foreach (var mdiChild in MdiChildren)
             {
-                ((Blank)mdiChild).RefreshAmount();
+                Blank blank = (Blank)mdiChild;
+                blank.RefreshAmount();
             }
-            englishToolStripMenuItem.Checked = false;
-            ukrainianToolStripMenuItem.Checked = true;
-            WindowState = FormWindowState.Normal;
-            WindowState = FormWindowState.Maximized;
+        }
+
+        private void CheckLanguageItem(string lang)
+        {
+            englishToolStripMenuItem.Checked = lang == "en";
+            ukrainianToolStripMenuItem.Checked = lang == "uk";
         }
     }
 }
