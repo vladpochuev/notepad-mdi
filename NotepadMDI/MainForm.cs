@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Globalization;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NotepadMDI
@@ -14,7 +10,6 @@ namespace NotepadMDI
     public partial class MainForm : Form
     {
         private HashSet<int> UntitledNums = new HashSet<int>();
-        private FindForm findForm;
 
         public int GetFreeUntitledNum()
         {
@@ -42,7 +37,6 @@ namespace NotepadMDI
         {
             InitializeComponent();
             saveToolStripMenuItem.Enabled = false;
-            findForm = new FindForm();
         }
 
         private void arrangeItemsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,7 +98,7 @@ namespace NotepadMDI
             frm.WindowState = FormWindowState.Maximized;
             frm.RefreshAmount();
             frm.Show();
-            findForm.Editor = frm.RichTextBox;
+
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,7 +114,6 @@ namespace NotepadMDI
                 frm.RefreshAmount();
                 frm.Show();
                 saveToolStripMenuItem.Enabled = true;
-                findForm.Editor = frm.RichTextBox;
             }
         }
 
@@ -196,6 +189,8 @@ namespace NotepadMDI
 
         private void findToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FindForm findForm = new FindForm();
+            findForm.Editor = ((Blank)ActiveMdiChild)?.RichTextBox;
             findForm.Show();
         }
 
@@ -237,6 +232,38 @@ namespace NotepadMDI
             {
                 pasteToolStripMenuItem_Click(this, EventArgs.Empty);
             }
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            Controls.Remove(miniToolStrip);
+            Controls.Remove(toolStripMain);
+            InitializeComponent();
+            foreach (var mdiChild in MdiChildren)
+            {
+                ((Blank)mdiChild).RefreshAmount();
+            }
+            englishToolStripMenuItem.Checked = true;
+            ukrainianToolStripMenuItem.Checked = false;
+            WindowState = FormWindowState.Normal;
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void ukrainianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("uk");
+            Controls.Remove(miniToolStrip);
+            Controls.Remove(toolStripMain);
+            InitializeComponent();
+            foreach (var mdiChild in MdiChildren)
+            {
+                ((Blank)mdiChild).RefreshAmount();
+            }
+            englishToolStripMenuItem.Checked = false;
+            ukrainianToolStripMenuItem.Checked = true;
+            WindowState = FormWindowState.Normal;
+            WindowState = FormWindowState.Maximized;
         }
     }
 }

@@ -1,6 +1,8 @@
 using System;
+using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace NotepadMDI
@@ -77,6 +79,11 @@ namespace NotepadMDI
             result.SelectionStart = position;
 
             return result;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

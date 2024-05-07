@@ -14,6 +14,8 @@ namespace NotepadMDI
         public bool IsSaved = false;
         public bool WasSaved = false;
 
+        private ComponentResourceManager resources = new ComponentResourceManager(typeof(Blank));
+
         public Font TextFont
         {
             get => richTextBox.SelectionFont;
@@ -110,8 +112,9 @@ namespace NotepadMDI
 
         private void Blank_FormClosing(object sender, FormClosingEventArgs e)
         {
-            string message = $"Do you want to save changes in {DocName}?";
-            if (!IsSaved && MessageBox.Show(message, "Message", MessageBoxButtons.YesNo,
+            string message = resources.GetString("blank_save_message");
+            string title = resources.GetString("blank_save_title");
+            if (!IsSaved && MessageBox.Show(string.Format(message, DocName), title, MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (WasSaved)
@@ -132,7 +135,7 @@ namespace NotepadMDI
 
         public void RefreshAmount()
         {
-            sbAmount.Text = $"Amount of symbols {richTextBox.Text.Length}";
+            sbAmount.Text = resources.GetString("blank_amount_of_symbols") + richTextBox.Text.Length;
         }
 
         private void Blank_FormClosed(object sender, FormClosedEventArgs e)

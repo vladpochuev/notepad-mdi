@@ -68,13 +68,28 @@
         </Compile>
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
+        <EmbeddedResource Include="Blank.en.resx">
+          <DependentUpon>Blank.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Blank.resx">
+          <DependentUpon>Blank.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Blank.uk.resx">
           <DependentUpon>Blank.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="FindForm.resx">
           <DependentUpon>FindForm.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="FindForm.uk.resx">
+          <DependentUpon>FindForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="MainForm.en.resx">
+          <DependentUpon>MainForm.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="MainForm.resx">
+          <DependentUpon>MainForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="MainForm.uk.resx">
           <DependentUpon>MainForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">

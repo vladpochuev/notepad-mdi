@@ -117,16 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="blank_amount_of_symbols" xml:space="preserve">
-    <value>Amount of symbols </value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Знайти:</value>
   </data>
-  <data name="blank_save_message" xml:space="preserve">
-    <value>Do you want to save changes in {0}?</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnFindNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 21</value>
   </data>
-  <data name="blank_save_title" xml:space="preserve">
-    <value>Save</value>
+  <data name="btnFindNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 20</value>
+  </data>
+  <data name="btnFindNext.Text" xml:space="preserve">
+    <value>Знайти</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 62</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 20</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="oDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 16</value>
+  </data>
+  <data name="oDown.Text" xml:space="preserve">
+    <value>Вниз</value>
+  </data>
+  <data name="oUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="oUp.Text" xml:space="preserve">
+    <value>Вверх</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Напрям</value>
+  </data>
+  <data name="chkMatchCase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 62</value>
+  </data>
+  <data name="chkMatchCase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 39</value>
+  </data>
+  <data name="chkMatchCase.Text" xml:space="preserve">
+    <value>Враховувати регістр</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Знайти</value>
   </data>
 </root>
