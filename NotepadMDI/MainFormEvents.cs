@@ -88,6 +88,24 @@ namespace NotepadMDI
             blank?.Paste();
         }
 
+        private void leftAlignmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Blank blank = (Blank)ActiveMdiChild;
+            blank.TextAlignment = HorizontalAlignment.Left;
+        }
+
+        private void centerAlignmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Blank blank = (Blank)ActiveMdiChild;
+            blank.TextAlignment = HorizontalAlignment.Center;
+        }
+
+        private void rightAlignmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Blank blank = (Blank)ActiveMdiChild;
+            blank.TextAlignment = HorizontalAlignment.Right;
+        }
+
         private void fontToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowFontDialog();

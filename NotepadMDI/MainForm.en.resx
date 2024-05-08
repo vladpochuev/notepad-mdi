@@ -123,10 +123,25 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="fontToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
+    <value>168, 22</value>
   </data>
   <data name="colorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
+    <value>168, 22</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 6</value>
+  </data>
+  <data name="leftAlignmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="leftAlignmentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Left Alignment</value>
+  </data>
+  <data name="centerAlignmentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Center Alignment</value>
+  </data>
+  <data name="rightAlignmentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Right Alignment</value>
   </data>
   <data name="arrangeItemsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 22</value>

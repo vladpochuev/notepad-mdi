@@ -206,16 +206,37 @@
     <value>Редагувати</value>
   </data>
   <data name="fontToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 22</value>
+    <value>253, 22</value>
   </data>
   <data name="fontToolStripMenuItem.Text" xml:space="preserve">
     <value>Шрифт</value>
   </data>
   <data name="colorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 22</value>
+    <value>253, 22</value>
   </data>
   <data name="colorToolStripMenuItem.Text" xml:space="preserve">
     <value>Колір</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 6</value>
+  </data>
+  <data name="leftAlignmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 22</value>
+  </data>
+  <data name="leftAlignmentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вирівнювання по лівому краю</value>
+  </data>
+  <data name="centerAlignmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 22</value>
+  </data>
+  <data name="centerAlignmentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вирівнювання по центру</value>
+  </data>
+  <data name="rightAlignmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 22</value>
+  </data>
+  <data name="rightAlignmentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вирівнювання по правому краю</value>
   </data>
   <data name="formatToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 20</value>

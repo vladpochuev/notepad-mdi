@@ -26,6 +26,12 @@ namespace NotepadMDI
             set => RichTextBox.SelectionColor = value;
         }
 
+        public HorizontalAlignment TextAlignment
+        {
+            get => RichTextBox.SelectionAlignment;
+            set => RichTextBox.SelectionAlignment = value;
+        }
+
         public RichTextBox RichTextBox
         {
             get => richTextBox;
