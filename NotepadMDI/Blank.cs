@@ -87,26 +87,45 @@ namespace NotepadMDI
         {
             if (string.IsNullOrEmpty(fileName)) return;
             StreamReader reader = new StreamReader(fileName);
-            RichTextBox.Text = reader.ReadToEnd();
+
+            if (fileName.EndsWith(".txt"))
+            {
+                RichTextBox.Text = reader.ReadToEnd();
+            }
+            else
+            {
+                RichTextBox.Rtf = reader.ReadToEnd();
+            }
+
             reader.Close();
         }
 
         public void WriteFile(string fileName)
         {
             if (string.IsNullOrEmpty(fileName)) return;
-            StreamWriter writer = new StreamWriter(fileName);
-            writer.Write(RichTextBox.Text);
-            writer.Close();
+
+            RichTextBoxStreamType streamType = fileName.EndsWith(".txt")
+                ? RichTextBoxStreamType.PlainText
+                : RichTextBoxStreamType.RichText;
+
+            RichTextBox.SaveFile(fileName, streamType);
         }
 
-        private void ShowSaveDialog(string title, string message)
+        private bool DefineIfNeedsToSave(string title, string message)
         {
-            if (!IsSaved && MessageBox.Show(string.Format(message, DocName),
-                    title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (!IsSaved)
             {
-                MainForm mainForm = (MainForm)MdiParent;
-                mainForm.SaveOrSaveAs(WasSaved);
+                return ShowSaveDialog(title, message) == DialogResult.Yes;
             }
+
+            return false;
+        }
+
+        private DialogResult ShowSaveDialog(string title, string message)
+        {
+            DialogResult dialogResult = MessageBox.Show(string.Format(message, DocName),
+                title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return dialogResult;
         }
 
         public void RefreshAmount()

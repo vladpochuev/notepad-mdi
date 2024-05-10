@@ -24,6 +24,22 @@ namespace NotepadMDI
             blank.IsSaved = true;
         }
 
+        private void SaveAs()
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Blank blank = (Blank)ActiveMdiChild;
+                blank.WriteFile(saveFileDialog1.FileName);
+                if (!blank.WasSaved) SetFreeUntitledNum(blank.DocName);
+
+                blank.DocName = saveFileDialog1.FileName;
+                blank.Text = saveFileDialog1.FileName;
+                saveToolStripMenuItem.Enabled = true;
+                blank.WasSaved = true;
+                blank.IsSaved = true;
+            }
+        }
+
         private void Open()
         {
             if (openFileDialog1.ShowDialog() != DialogResult.OK) return;
@@ -60,25 +76,6 @@ namespace NotepadMDI
 
             UntitledNums.Add(i);
             return i;
-        }
-
-        private void SaveAs()
-        {
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                Blank blank = (Blank)ActiveMdiChild;
-                blank.WriteFile(saveFileDialog1.FileName);
-                if (!blank.WasSaved)
-                {
-                    SetFreeUntitledNum(blank.DocName);
-                }
-
-                blank.DocName = saveFileDialog1.FileName;
-                blank.Text = saveFileDialog1.FileName;
-                saveToolStripMenuItem.Enabled = true;
-                blank.WasSaved = true;
-                blank.IsSaved = true;
-            }
         }
 
         public void SetFreeUntitledNum(string docName)

@@ -292,6 +292,12 @@
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
     <value>Мова</value>
   </data>
+    <data name="openFileDialog1.Filter" xml:space="preserve">
+    <value>Rich Text File (*.rtf)|*.rtf|Plain Text File (*.txt)|*.txt|All Files(*.*)|*.*</value>
+  </data>
+    <data name="saveFileDialog1.Filter" xml:space="preserve">
+    <value>Rich Text File (*.rtf)|*.rtf|Plain Text File (*.txt)|*.txt</value>
+  </data>
   <data name="tbNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

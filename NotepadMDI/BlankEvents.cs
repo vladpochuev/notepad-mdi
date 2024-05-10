@@ -48,7 +48,11 @@ namespace NotepadMDI
         {
             string title = Resources.GetString("blank_save_title");
             string message = Resources.GetString("blank_save_message") ?? "Do you want to save changes in {0}?";
-            ShowSaveDialog(title, message);
+            if (DefineIfNeedsToSave(title, message))
+            {
+                MainForm mainForm = (MainForm)MdiParent;
+                mainForm.SaveOrSaveAs(WasSaved);
+            }
         }
     }
 }

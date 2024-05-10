@@ -89,7 +89,7 @@
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.newToolStripMenuItem, this.openToolStripMenuItem, this.saveToolStripMenuItem, this.saveAsToolStripMenuItem, this.toolStripSeparator2, this.findToolStripMenuItem, this.toolStripSeparator3, this.exitToolStripMenuItem });
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            // 
+            //
             // newToolStripMenuItem
             // 
             resources.ApplyResources(this.newToolStripMenuItem, "newToolStripMenuItem");
@@ -270,12 +270,14 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "Текстовые файлы";
+            this.openFileDialog1.DefaultExt = "*.rtf";
+            this.openFileDialog1.FileName = "Text Files";
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
             // saveFileDialog1
             // 
-            this.saveFileDialog1.FileName = "Текстовые файлы";
+            this.saveFileDialog1.DefaultExt = "*.rtf";
+            this.saveFileDialog1.FileName = "Text Files";
             resources.ApplyResources(this.saveFileDialog1, "saveFileDialog1");
             // 
             // toolStripMain
