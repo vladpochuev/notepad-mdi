@@ -14,10 +14,4 @@
     <data name="blank_amount_of_symbols" xml:space="preserve">
         <value>Кількість символів </value>
     </data>
-    <data name="blank_save_message" xml:space="preserve">
-        <value>Ви хочете зберегти зміни у {0}?</value>
-    </data>
-    <data name="blank_save_title" xml:space="preserve">
-        <value>Зберегти</value>
-    </data>
 </root>

@@ -217,6 +217,12 @@
   <data name="colorToolStripMenuItem.Text" xml:space="preserve">
     <value>Колір</value>
   </data>
+  <data name="insertImageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 22</value>
+  </data>
+  <data name="insertImageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вставити зображення</value>
+  </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>250, 6</value>
   </data>
@@ -292,11 +298,11 @@
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
     <value>Мова</value>
   </data>
-    <data name="openFileDialog1.Filter" xml:space="preserve">
-    <value>Rich Text File (*.rtf)|*.rtf|Plain Text File (*.txt)|*.txt|All Files(*.*)|*.*</value>
+  <data name="openFileDialog.Filter" xml:space="preserve">
+    <value>Rich Text File (*.rtf)|*.rtf</value>
   </data>
-    <data name="saveFileDialog1.Filter" xml:space="preserve">
-    <value>Rich Text File (*.rtf)|*.rtf|Plain Text File (*.txt)|*.txt</value>
+  <data name="saveFileDialog.Filter" xml:space="preserve">
+    <value>Rich Text File (*.rtf)|*.rtf</value>
   </data>
   <data name="tbNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -732,5 +738,17 @@
   </data>
   <data name="tbPaste.ToolTipText" xml:space="preserve">
     <value>Вставити</value>
+  </data>
+  <data name="mainform_save_title" xml:space="preserve">
+    <value>Зберегти</value>
+  </data>
+  <data name="mainform_save_message" xml:space="preserve">
+    <value>Ви бажаєте зберегти зміни в {0}?</value>
+  </data>
+  <data name="mainform_error_title" xml:space="preserve">
+    <value>Помилка</value>
+  </data>
+  <data name="mainform_wront_file_format" xml:space="preserve">
+    <value>Неправильний формат файлу</value>
   </data>
 </root>

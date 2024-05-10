@@ -50,6 +50,7 @@
             this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.leftAlignmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.centerAlignmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,10 +63,10 @@
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ukrainianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
             this.tbNew = new System.Windows.Forms.ToolStripButton();
             this.tbOpen = new System.Windows.Forms.ToolStripButton();
@@ -89,7 +90,7 @@
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.newToolStripMenuItem, this.openToolStripMenuItem, this.saveToolStripMenuItem, this.saveAsToolStripMenuItem, this.toolStripSeparator2, this.findToolStripMenuItem, this.toolStripSeparator3, this.exitToolStripMenuItem });
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            //
+            // 
             // newToolStripMenuItem
             // 
             resources.ApplyResources(this.newToolStripMenuItem, "newToolStripMenuItem");
@@ -180,7 +181,7 @@
             // formatToolStripMenuItem
             // 
             resources.ApplyResources(this.formatToolStripMenuItem, "formatToolStripMenuItem");
-            this.formatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.fontToolStripMenuItem, this.colorToolStripMenuItem, this.toolStripMenuItem1, this.leftAlignmentToolStripMenuItem, this.centerAlignmentToolStripMenuItem, this.rightAlignmentToolStripMenuItem });
+            this.formatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.fontToolStripMenuItem, this.colorToolStripMenuItem, this.insertImageToolStripMenuItem, this.toolStripMenuItem1, this.leftAlignmentToolStripMenuItem, this.centerAlignmentToolStripMenuItem, this.rightAlignmentToolStripMenuItem });
             this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
             // 
             // fontToolStripMenuItem
@@ -194,6 +195,12 @@
             resources.ApplyResources(this.colorToolStripMenuItem, "colorToolStripMenuItem");
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
             this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
+            // 
+            // insertImageToolStripMenuItem
+            // 
+            resources.ApplyResources(this.insertImageToolStripMenuItem, "insertImageToolStripMenuItem");
+            this.insertImageToolStripMenuItem.Name = "insertImageToolStripMenuItem";
+            this.insertImageToolStripMenuItem.Click += new System.EventHandler(this.insertImageToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -268,17 +275,17 @@
             this.ukrainianToolStripMenuItem.Name = "ukrainianToolStripMenuItem";
             this.ukrainianToolStripMenuItem.Click += new System.EventHandler(this.ukrainianToolStripMenuItem_Click);
             // 
-            // openFileDialog1
+            // openFileDialog
             // 
-            this.openFileDialog1.DefaultExt = "*.rtf";
-            this.openFileDialog1.FileName = "Text Files";
-            resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
+            this.openFileDialog.DefaultExt = "*.rtf";
+            this.openFileDialog.FileName = "Text Files";
+            resources.ApplyResources(this.openFileDialog, "openFileDialog");
             // 
-            // saveFileDialog1
+            // saveFileDialog
             // 
-            this.saveFileDialog1.DefaultExt = "*.rtf";
-            this.saveFileDialog1.FileName = "Text Files";
-            resources.ApplyResources(this.saveFileDialog1, "saveFileDialog1");
+            this.saveFileDialog.DefaultExt = "*.rtf";
+            this.saveFileDialog.FileName = "Text Files";
+            resources.ApplyResources(this.saveFileDialog, "saveFileDialog");
             // 
             // toolStripMain
             // 
@@ -347,6 +354,8 @@
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.ToolStripMenuItem insertImageToolStripMenuItem;
+
         private System.Windows.Forms.ToolStripMenuItem centerAlignmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rightAlignmentToolStripMenuItem;
 
@@ -376,15 +385,15 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
 
-        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog;
 
         private System.Windows.Forms.FontDialog fontDialog1;
 
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
 
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
 
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
 
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 

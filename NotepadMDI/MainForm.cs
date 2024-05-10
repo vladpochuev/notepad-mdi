@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
@@ -10,11 +11,13 @@ namespace NotepadMDI
     public partial class MainForm : Form
     {
         private HashSet<int> UntitledNums { get; set; }
+        private ComponentResourceManager Resources { get; set; }
 
         public MainForm()
         {
             InitializeComponent();
             UntitledNums = new HashSet<int>();
+            Resources = new ComponentResourceManager(typeof(MainForm));
         }
 
         private void Save()
@@ -26,14 +29,14 @@ namespace NotepadMDI
 
         private void SaveAs()
         {
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Blank blank = (Blank)ActiveMdiChild;
-                blank.WriteFile(saveFileDialog1.FileName);
+                blank.WriteFile(saveFileDialog.FileName);
                 if (!blank.WasSaved) SetFreeUntitledNum(blank.DocName);
 
-                blank.DocName = saveFileDialog1.FileName;
-                blank.Text = saveFileDialog1.FileName;
+                blank.DocName = saveFileDialog.FileName;
+                blank.Text = saveFileDialog.FileName;
                 saveToolStripMenuItem.Enabled = true;
                 blank.WasSaved = true;
                 blank.IsSaved = true;
@@ -42,14 +45,17 @@ namespace NotepadMDI
 
         private void Open()
         {
-            if (openFileDialog1.ShowDialog() != DialogResult.OK) return;
+            openFileDialog.Filter = "Rich Text File (*.rtf)|*.rtf|Plain Text File (*.txt)|*.txt|All Files(*.*)|*.*";
+            openFileDialog.DefaultExt = ".rtf";
+            openFileDialog.FileName = "Text file";
+            if (openFileDialog.ShowDialog() != DialogResult.OK) return;
 
             Blank blank = new Blank();
             blank.MdiParent = this;
-            blank.DocName = openFileDialog1.FileName;
+            blank.DocName = openFileDialog.FileName;
             blank.Text = blank.DocName;
             blank.WasSaved = true;
-            blank.ReadFile(openFileDialog1.FileName);
+            blank.ReadFile(openFileDialog.FileName);
             blank.RefreshAmount();
             blank.Show();
             saveToolStripMenuItem.Enabled = true;
@@ -101,12 +107,43 @@ namespace NotepadMDI
         {
             Blank blank = (Blank)ActiveMdiChild;
             if (blank == null) return;
-            colorDialog1.Color = blank.TextColor;
+            colorDialog.Color = blank.TextColor;
 
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            if (colorDialog.ShowDialog() == DialogResult.OK)
             {
-                blank.TextColor = colorDialog1.Color;
+                blank.TextColor = colorDialog.Color;
             }
+        }
+
+        public DialogResult ShowSaveDialog(string docName)
+        {
+            string title = Resources.GetString("mainform_save_title");
+            string message = Resources.GetString("mainform_save_message") ?? "Do you want to save changes in {0}?";
+            DialogResult dialogResult = MessageBox.Show(string.Format(message, docName),
+                title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return dialogResult;
+        }
+
+        private Bitmap GetImage()
+        {
+            openFileDialog.Filter = "All Files(*.*)|*.*";
+            openFileDialog.DefaultExt = ".png";
+            openFileDialog.FileName = "Image file";
+            if (openFileDialog.ShowDialog() != DialogResult.OK) return null;
+
+            Bitmap bitmap = null;
+            try
+            {
+                bitmap = new Bitmap(openFileDialog.FileName);
+            }
+            catch
+            {
+                string title = Resources.GetString("mainform_error_title");
+                string message = Resources.GetString("mainform_wront_file_format");
+                MessageBox.Show(message, title);
+            }
+
+            return bitmap;
         }
 
         public void SaveOrSaveAs(bool wasSaved)

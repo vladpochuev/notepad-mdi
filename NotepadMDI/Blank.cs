@@ -111,21 +111,15 @@ namespace NotepadMDI
             RichTextBox.SaveFile(fileName, streamType);
         }
 
-        private bool DefineIfNeedsToSave(string title, string message)
+        private bool DefineIfNeedsToSave()
         {
             if (!IsSaved)
             {
-                return ShowSaveDialog(title, message) == DialogResult.Yes;
+                MainForm mainForm = (MainForm)MdiParent;
+                return mainForm.ShowSaveDialog(DocName) == DialogResult.Yes;
             }
 
             return false;
-        }
-
-        private DialogResult ShowSaveDialog(string title, string message)
-        {
-            DialogResult dialogResult = MessageBox.Show(string.Format(message, DocName),
-                title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            return dialogResult;
         }
 
         public void RefreshAmount()

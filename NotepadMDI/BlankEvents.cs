@@ -46,9 +46,7 @@ namespace NotepadMDI
 
         private void Blank_FormClosing(object sender, FormClosingEventArgs e)
         {
-            string title = Resources.GetString("blank_save_title");
-            string message = Resources.GetString("blank_save_message") ?? "Do you want to save changes in {0}?";
-            if (DefineIfNeedsToSave(title, message))
+            if (DefineIfNeedsToSave())
             {
                 MainForm mainForm = (MainForm)MdiParent;
                 mainForm.SaveOrSaveAs(WasSaved);

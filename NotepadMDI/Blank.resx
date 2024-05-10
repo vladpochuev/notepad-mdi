@@ -123,10 +123,4 @@
   <data name="blank_amount_of_symbols" xml:space="preserve">
     <value>Amount of symbols </value>
   </data>
-  <data name="blank_save_message" xml:space="preserve">
-    <value>Do you want to save changes in {0}?</value>
-  </data>
-  <data name="blank_save_title" xml:space="preserve">
-    <value>Save</value>
-  </data>
 </root>

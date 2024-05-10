@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace NotepadMDI
@@ -114,6 +115,21 @@ namespace NotepadMDI
         private void colorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowColorDialog();
+        }
+
+        private void insertImageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Blank blank = (Blank)ActiveMdiChild;
+            Bitmap bitmap = GetImage();
+            if (bitmap == null) return;
+
+            Clipboard.SetDataObject(bitmap);
+            DataFormats.Format format = DataFormats.GetFormat(DataFormats.Bitmap);
+
+            if (blank.RichTextBox.CanPaste(format))
+            {
+                blank.RichTextBox.Paste(format);
+            }
         }
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
