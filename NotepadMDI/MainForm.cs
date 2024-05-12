@@ -16,6 +16,11 @@ namespace NotepadMDI
         public MainForm()
         {
             InitializeComponent();
+            InitializeFields();
+        }
+
+        private void InitializeFields()
+        {
             UntitledNums = new HashSet<int>();
             Resources = new ComponentResourceManager(typeof(MainForm));
         }
@@ -45,9 +50,7 @@ namespace NotepadMDI
 
         private void Open()
         {
-            openFileDialog.Filter = "Rich Text File (*.rtf)|*.rtf|Plain Text File (*.txt)|*.txt|All Files(*.*)|*.*";
-            openFileDialog.DefaultExt = ".rtf";
-            openFileDialog.FileName = "Text file";
+            SetOpenFileProperty();
             if (openFileDialog.ShowDialog() != DialogResult.OK) return;
 
             Blank blank = new Blank();
@@ -59,6 +62,13 @@ namespace NotepadMDI
             blank.RefreshAmount();
             blank.Show();
             saveToolStripMenuItem.Enabled = true;
+        }
+
+        private void SetOpenFileProperty()
+        {
+            openFileDialog.Filter = "Rich Text File (*.rtf)|*.rtf|Plain Text File (*.txt)|*.txt|All Files(*.*)|*.*";
+            openFileDialog.DefaultExt = ".rtf";
+            openFileDialog.FileName = "Text file";
         }
 
         private void CreateNew()
@@ -126,9 +136,7 @@ namespace NotepadMDI
 
         private Bitmap GetImage()
         {
-            openFileDialog.Filter = "All Files(*.*)|*.*";
-            openFileDialog.DefaultExt = ".png";
-            openFileDialog.FileName = "Image file";
+            SetOpenImageProperty();
             if (openFileDialog.ShowDialog() != DialogResult.OK) return null;
 
             Bitmap bitmap = null;
@@ -145,6 +153,14 @@ namespace NotepadMDI
 
             return bitmap;
         }
+
+        private void SetOpenImageProperty()
+        {
+            openFileDialog.Filter = "All Files(*.*)|*.*";
+            openFileDialog.DefaultExt = ".png";
+            openFileDialog.FileName = "Image file";
+        }
+
 
         public void SaveOrSaveAs(bool wasSaved)
         {

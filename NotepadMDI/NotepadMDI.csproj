@@ -53,6 +53,8 @@
           <DependentUpon>Blank.cs</DependentUpon>
         </Compile>
         <Compile Include="BlankEvents.cs" />
+        <Compile Include="CodeBlockFinder.cs" />
+        <Compile Include="CSharpKeyword.cs" />
         <Compile Include="FindForm.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -71,6 +73,7 @@
         <Compile Include="MainFormEvents.cs" />
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="SyntaxHighlighter.cs" />
         <EmbeddedResource Include="Blank.en.resx">
           <DependentUpon>Blank.cs</DependentUpon>
         </EmbeddedResource>

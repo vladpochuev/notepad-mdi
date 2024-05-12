@@ -33,6 +33,7 @@ namespace NotepadMDI
         private void richTextBox_TextChanged(object sender, EventArgs e)
         {
             RefreshAmount();
+            Highlighter.Highlight();
         }
 
         private void Blank_FormClosed(object sender, FormClosedEventArgs e)

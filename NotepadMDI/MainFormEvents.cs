@@ -126,7 +126,7 @@ namespace NotepadMDI
             Clipboard.SetDataObject(bitmap);
             DataFormats.Format format = DataFormats.GetFormat(DataFormats.Bitmap);
 
-            if (blank.RichTextBox.CanPaste(format))
+            if (blank.RichTextBox.CanPaste(format) && !blank.SelectionInCodeBlock())
             {
                 blank.RichTextBox.Paste(format);
             }

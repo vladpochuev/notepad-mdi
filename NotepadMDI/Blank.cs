@@ -13,6 +13,7 @@ namespace NotepadMDI
         public bool WasSaved = false;
         private string BufferText { get; set; }
         private ComponentResourceManager Resources { get; set; }
+        private SyntaxHighlighter Highlighter { get; set; }
 
         public Font TextFont
         {
@@ -48,6 +49,7 @@ namespace NotepadMDI
         {
             Resources = new ComponentResourceManager(typeof(Blank));
             BufferText = "";
+            Highlighter = new SyntaxHighlighter(RichTextBox);
             SetTimeNow();
         }
 
@@ -117,6 +119,23 @@ namespace NotepadMDI
             {
                 MainForm mainForm = (MainForm)MdiParent;
                 return mainForm.ShowSaveDialog(DocName) == DialogResult.Yes;
+            }
+
+            return false;
+        }
+
+        public bool SelectionInCodeBlock()
+        {
+            CodeBlockFinder blockFinder = new CodeBlockFinder(RichTextBox.Text);
+
+            while (blockFinder.HasNext())
+            {
+                blockFinder.Next();
+                if (blockFinder.CodeBlockStart < RichTextBox.SelectionStart
+                    && RichTextBox.SelectionStart < blockFinder.CodeBlockStart + blockFinder.CodeBlockLength)
+                {
+                    return true;
+                }
             }
 
             return false;
