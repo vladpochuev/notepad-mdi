@@ -127,12 +127,19 @@
       <Content Include="Image\open-icon.ico" />
       <Content Include="Image\paste-icon.ico" />
       <Content Include="Image\save-icon.ico" />
+      <Content Include="Resources\center_alignment_icon.ico" />
+      <Content Include="Resources\code_icon.ico" />
+      <Content Include="Resources\color_icon.ico" />
       <Content Include="Resources\copy_icon.ico" />
       <Content Include="Resources\create_icon.ico" />
       <Content Include="Resources\cut_icon.ico" />
+      <Content Include="Resources\font_icon.ico" />
       <Content Include="Resources\icon_save.ico" />
+      <Content Include="Resources\image_icon.ico" />
+      <Content Include="Resources\left_alignment_icon.ico" />
       <Content Include="Resources\open_icon.ico" />
       <Content Include="Resources\paste_icon.ico" />
+      <Content Include="Resources\right_alignment_icon.ico" />
       <Content Include="Resources\save_icon.ico" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>

@@ -130,6 +130,9 @@
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 6</value>
   </data>
+  <data name="tbFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 33</value>
+  </data>
   <data name="rightAlignmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 22</value>
   </data>
@@ -139,20 +142,29 @@
   <data name="insertImageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 22</value>
   </data>
+  <data name="mainform_wront_file_format" xml:space="preserve">
+    <value>Wrong file format</value>
+  </data>
   <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cutToolStripMenuItem.Name" xml:space="preserve">
-    <value>cutToolStripMenuItem</value>
+  <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 36</value>
   </data>
   <data name="tbOpen.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
+  </data>
+  <data name="mainform_error_title" xml:space="preserve">
+    <value>Error</value>
   </data>
   <data name="&gt;&gt;saveToolStripMenuItem.Name" xml:space="preserve">
     <value>saveToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
+    <value>toolStripSeparator4</value>
   </data>
   <data name="&gt;&gt;colorDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -191,14 +203,23 @@
   <data name="selectAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 22</value>
   </data>
+  <data name="&gt;&gt;tbCAlignment.Name" xml:space="preserve">
+    <value>tbCAlignment</value>
+  </data>
+  <data name="&gt;&gt;tbColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbOpen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;formatToolStripMenuItem.Name" xml:space="preserve">
     <value>formatToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;ukrainianToolStripMenuItem.Name" xml:space="preserve">
     <value>ukrainianToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolStripButton2.Name" xml:space="preserve">
+    <value>toolStripButton2</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -206,8 +227,14 @@
   <data name="&gt;&gt;arrangeItemsToolStripMenuItem.Name" xml:space="preserve">
     <value>arrangeItemsToolStripMenuItem</value>
   </data>
+  <data name="&gt;&gt;toolStripSeparator5.Name" xml:space="preserve">
+    <value>toolStripSeparator5</value>
+  </data>
   <data name="openToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>CTRL+O</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
   </data>
   <data name="&gt;&gt;openFileDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -215,8 +242,11 @@
   <data name="colorToolStripMenuItem.Text" xml:space="preserve">
     <value>Color</value>
   </data>
-  <data name="&gt;&gt;windowToolStripMenuItem.Name" xml:space="preserve">
-    <value>windowToolStripMenuItem</value>
+  <data name="centerAlignmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
+  </data>
+  <data name="&gt;&gt;tbSave.Name" xml:space="preserve">
+    <value>tbSave</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Notepad C#</value>
@@ -231,8 +261,8 @@
   <data name="&gt;&gt;horizontalToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tileVerticalToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="toolStripButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 33</value>
   </data>
   <data name="&gt;&gt;arrangeItemsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -288,6 +318,9 @@
   <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 22</value>
   </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 20</value>
+  </data>
   <data name="windowToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 20</value>
   </data>
@@ -297,14 +330,14 @@
   <data name="tbSave.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="&gt;&gt;tbSave.Name" xml:space="preserve">
-    <value>tbSave</value>
+  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 36</value>
   </data>
   <data name="selectAllToolStripMenuItem.Text" xml:space="preserve">
     <value>Select &amp;All</value>
   </data>
-  <data name="windowToolStripMenuItem.Text" xml:space="preserve">
-    <value>Window</value>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tbNew.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 33</value>
@@ -327,6 +360,15 @@
   <data name="tbCut.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
+  <data name="&gt;&gt;tbRAlignment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbColor.Name" xml:space="preserve">
+    <value>tbColor</value>
+  </data>
+  <data name="&gt;&gt;tileVerticalToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;tbCopy.Name" xml:space="preserve">
     <value>tbCopy</value>
   </data>
@@ -348,11 +390,17 @@
   <data name="tbCut.Text" xml:space="preserve">
     <value>Cut</value>
   </data>
+  <data name="&gt;&gt;toolStripSeparator7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;fontDialog1.Name" xml:space="preserve">
     <value>fontDialog1</value>
   </data>
   <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>154, 22</value>
+  </data>
+  <data name="toolStripButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 33</value>
   </data>
   <data name="deleteToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>CTRL+Y</value>
@@ -369,8 +417,8 @@
   <data name="&gt;&gt;fontToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 20</value>
+  <data name="&gt;&gt;windowToolStripMenuItem.Name" xml:space="preserve">
+    <value>windowToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
@@ -387,11 +435,14 @@
   <data name="tbPaste.ToolTipText" xml:space="preserve">
     <value>Paste</value>
   </data>
-  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
-    <value>English</value>
+  <data name="&gt;&gt;englishToolStripMenuItem.Name" xml:space="preserve">
+    <value>englishToolStripMenuItem</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Exit</value>
+  </data>
+  <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Delete</value>
   </data>
   <data name="&gt;&gt;editToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -404,6 +455,9 @@
   </data>
   <data name="cascadeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 22</value>
+  </data>
+  <data name="&gt;&gt;rightAlignmentToolStripMenuItem.Name" xml:space="preserve">
+    <value>rightAlignmentToolStripMenuItem</value>
   </data>
   <data name="saveToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Save</value>
@@ -423,8 +477,8 @@
   <data name="&gt;&gt;tbOpen.Name" xml:space="preserve">
     <value>tbOpen</value>
   </data>
-  <data name="miniToolStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
     <value>toolStripSeparator3</value>
@@ -447,7 +501,10 @@
   <data name="&gt;&gt;miniToolStrip.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;tbOpen.Type" xml:space="preserve">
+  <data name="&gt;&gt;tbRAlignment.Name" xml:space="preserve">
+    <value>tbRAlignment</value>
+  </data>
+  <data name="&gt;&gt;tbFont.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="fontToolStripMenuItem.Text" xml:space="preserve">
@@ -465,8 +522,14 @@
   <data name="tbSave.Text" xml:space="preserve">
     <value>Save</value>
   </data>
-  <data name="&gt;&gt;miniToolStrip.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="toolStripMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 36</value>
+  </data>
+  <data name="tbRAlignment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 33</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
   </data>
   <data name="mainform_save_title" xml:space="preserve">
     <value>Save</value>
@@ -489,17 +552,20 @@
   <data name="&gt;&gt;selectAllToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;tbLAlignment.Name" xml:space="preserve">
+    <value>tbLAlignment</value>
+  </data>
   <data name="&gt;&gt;colorToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="toolStripMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 36</value>
+  <data name="&gt;&gt;toolStripButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tbPaste.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="miniToolStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;toolStripSeparator6.Name" xml:space="preserve">
+    <value>toolStripSeparator6</value>
   </data>
   <data name="&gt;&gt;leftAlignmentToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -510,8 +576,17 @@
   <data name="&gt;&gt;findToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripSeparator6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 33</value>
+  </data>
   <data name="&gt;&gt;englishToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbCode.Name" xml:space="preserve">
+    <value>tbCode</value>
   </data>
   <data name="newToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;New</value>
@@ -537,6 +612,9 @@
   <data name="tbCopy.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 33</value>
   </data>
+  <data name="&gt;&gt;tbImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>File</value>
   </data>
@@ -546,8 +624,11 @@
   <data name="tbSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 33</value>
   </data>
-  <data name="&gt;&gt;saveAsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolStripSeparator7.Name" xml:space="preserve">
+    <value>toolStripSeparator7</value>
+  </data>
+  <data name="&gt;&gt;tbCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;fontToolStripMenuItem.Name" xml:space="preserve">
     <value>fontToolStripMenuItem</value>
@@ -576,6 +657,12 @@
   <data name="&gt;&gt;deleteToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="windowToolStripMenuItem.Text" xml:space="preserve">
+    <value>Window</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;tbNew.Name" xml:space="preserve">
     <value>tbNew</value>
   </data>
@@ -588,11 +675,14 @@
   <data name="&gt;&gt;openToolStripMenuItem.Name" xml:space="preserve">
     <value>openToolStripMenuItem</value>
   </data>
-  <data name="fontToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
+  <data name="miniToolStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
-    <value>toolStripMenuItem1</value>
+  <data name="&gt;&gt;tbLAlignment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 33</value>
   </data>
   <data name="&gt;&gt;toolStripMain.Name" xml:space="preserve">
     <value>toolStripMain</value>
@@ -609,17 +699,20 @@
   <data name="tbNew.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="&gt;&gt;tbSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;cutToolStripMenuItem.Name" xml:space="preserve">
+    <value>cutToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;englishToolStripMenuItem.Name" xml:space="preserve">
-    <value>englishToolStripMenuItem</value>
+  <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;selectAllToolStripMenuItem.Name" xml:space="preserve">
     <value>selectAllToolStripMenuItem</value>
   </data>
   <data name="openToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Open</value>
+  </data>
+  <data name="tbLAlignment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 33</value>
   </data>
   <data name="&gt;&gt;ukrainianToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -633,14 +726,26 @@
   <data name="&gt;&gt;cutToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Delete</value>
+  <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 36</value>
+  </data>
+  <data name="tbColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 33</value>
+  </data>
+  <data name="&gt;&gt;tbFont.Name" xml:space="preserve">
+    <value>tbFont</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
   </data>
+  <data name="tbCAlignment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 33</value>
+  </data>
   <data name="cutToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>CTRL+X</value>
+  </data>
+  <data name="fontToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 22</value>
   </data>
   <data name="saveAsToolStripMenuItem.Text" xml:space="preserve">
     <value>Save &amp;As</value>
@@ -651,14 +756,17 @@
   <data name="tbCopy.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+  <data name="&gt;&gt;miniToolStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
   </data>
   <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
     <value>exitToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="arrangeItemsToolStripMenuItem.Text" xml:space="preserve">
     <value>Arrange Items</value>
@@ -678,14 +786,17 @@
   <data name="newToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
     <value />
   </data>
+  <data name="&gt;&gt;tbCAlignment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="tbOpen.Text" xml:space="preserve">
     <value>toolStripButton1</value>
   </data>
   <data name="&gt;&gt;cascadeToolStripMenuItem.Name" xml:space="preserve">
     <value>cascadeToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;rightAlignmentToolStripMenuItem.Name" xml:space="preserve">
-    <value>rightAlignmentToolStripMenuItem</value>
+  <data name="&gt;&gt;tbSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;insertImageToolStripMenuItem.Name" xml:space="preserve">
     <value>insertImageToolStripMenuItem</value>
@@ -696,14 +807,26 @@
   <data name="&gt;&gt;tbPaste.Name" xml:space="preserve">
     <value>tbPaste</value>
   </data>
-  <data name="centerAlignmentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
+  <data name="miniToolStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;toolStripButton1.Name" xml:space="preserve">
+    <value>toolStripButton1</value>
   </data>
   <data name="&gt;&gt;tbCut.Name" xml:space="preserve">
     <value>tbCut</value>
   </data>
+  <data name="&gt;&gt;tbImage.Name" xml:space="preserve">
+    <value>tbImage</value>
+  </data>
   <data name="saveToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>CTRL+S</value>
+  </data>
+  <data name="&gt;&gt;saveAsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 36</value>
   </data>
   <data name="&gt;&gt;languageToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -718,7 +841,7 @@
     <value>135, 17</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
+    <value>uk</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -735,10 +858,4 @@
   <metadata name="toolStripMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>623, 17</value>
   </metadata>
-  <data name="mainform_error_title" xml:space="preserve">
-    <value>Error</value>
-  </data>
-  <data name="mainform_wront_file_format" xml:space="preserve">
-    <value>Wrong file format</value>
-  </data>
 </root>

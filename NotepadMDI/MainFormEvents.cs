@@ -132,6 +132,12 @@ namespace NotepadMDI
             }
         }
 
+        private void tbCode_Click(object sender, EventArgs e)
+        {
+            Blank blank = (Blank)ActiveMdiChild;
+            blank.RichTextBox.SelectedText = "///\n\n///";
+        }
+
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangeLanguage("en");

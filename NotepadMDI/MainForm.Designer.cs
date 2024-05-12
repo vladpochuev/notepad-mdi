@@ -71,9 +71,20 @@
             this.tbNew = new System.Windows.Forms.ToolStripButton();
             this.tbOpen = new System.Windows.Forms.ToolStripButton();
             this.tbSave = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tbCut = new System.Windows.Forms.ToolStripButton();
             this.tbCopy = new System.Windows.Forms.ToolStripButton();
             this.tbPaste = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tbLAlignment = new System.Windows.Forms.ToolStripButton();
+            this.tbCAlignment = new System.Windows.Forms.ToolStripButton();
+            this.tbRAlignment = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.tbFont = new System.Windows.Forms.ToolStripButton();
+            this.tbColor = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.tbImage = new System.Windows.Forms.ToolStripButton();
+            this.tbCode = new System.Windows.Forms.ToolStripButton();
             this.miniToolStrip.SuspendLayout();
             this.toolStripMain.SuspendLayout();
             this.SuspendLayout();
@@ -291,7 +302,7 @@
             // 
             resources.ApplyResources(this.toolStripMain, "toolStripMain");
             this.toolStripMain.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.tbNew, this.tbOpen, this.tbSave, this.tbCut, this.tbCopy, this.tbPaste });
+            this.toolStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.tbNew, this.tbOpen, this.tbSave, this.toolStripSeparator4, this.tbCut, this.tbCopy, this.tbPaste, this.toolStripSeparator5, this.tbLAlignment, this.tbCAlignment, this.tbRAlignment, this.toolStripSeparator6, this.tbFont, this.tbColor, this.toolStripSeparator7, this.tbImage, this.tbCode });
             this.toolStripMain.Name = "toolStripMain";
             // 
             // tbNew
@@ -315,6 +326,11 @@
             this.tbSave.Name = "tbSave";
             this.tbSave.Click += new System.EventHandler(this.Save_Click);
             // 
+            // toolStripSeparator4
+            // 
+            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            // 
             // tbCut
             // 
             resources.ApplyResources(this.tbCut, "tbCut");
@@ -336,6 +352,77 @@
             this.tbPaste.Name = "tbPaste";
             this.tbPaste.Click += new System.EventHandler(this.Paste_Click);
             // 
+            // toolStripSeparator5
+            // 
+            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            // 
+            // tbLAlignment
+            // 
+            resources.ApplyResources(this.tbLAlignment, "tbLAlignment");
+            this.tbLAlignment.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbLAlignment.Image = global::NotepadMDI.Properties.Resources.left_alignment_icon;
+            this.tbLAlignment.Name = "tbLAlignment";
+            this.tbLAlignment.Click += new System.EventHandler(this.leftAlignmentToolStripMenuItem_Click);
+            // 
+            // tbCAlignment
+            // 
+            resources.ApplyResources(this.tbCAlignment, "tbCAlignment");
+            this.tbCAlignment.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbCAlignment.Image = global::NotepadMDI.Properties.Resources.center_alignment_icon;
+            this.tbCAlignment.Name = "tbCAlignment";
+            this.tbCAlignment.Click += new System.EventHandler(this.centerAlignmentToolStripMenuItem_Click);
+            // 
+            // tbRAlignment
+            // 
+            resources.ApplyResources(this.tbRAlignment, "tbRAlignment");
+            this.tbRAlignment.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbRAlignment.Image = global::NotepadMDI.Properties.Resources.right_alignment_icon;
+            this.tbRAlignment.Name = "tbRAlignment";
+            this.tbRAlignment.Click += new System.EventHandler(this.rightAlignmentToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            resources.ApplyResources(this.toolStripSeparator6, "toolStripSeparator6");
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            // 
+            // tbFont
+            // 
+            resources.ApplyResources(this.tbFont, "tbFont");
+            this.tbFont.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbFont.Image = global::NotepadMDI.Properties.Resources.font_icon;
+            this.tbFont.Name = "tbFont";
+            this.tbFont.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
+            // 
+            // tbColor
+            // 
+            resources.ApplyResources(this.tbColor, "tbColor");
+            this.tbColor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbColor.Image = global::NotepadMDI.Properties.Resources.color_icon;
+            this.tbColor.Name = "tbColor";
+            this.tbColor.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            // 
+            // tbImage
+            // 
+            resources.ApplyResources(this.tbImage, "tbImage");
+            this.tbImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbImage.Image = global::NotepadMDI.Properties.Resources.image_icon;
+            this.tbImage.Name = "tbImage";
+            this.tbImage.Click += new System.EventHandler(this.insertImageToolStripMenuItem_Click);
+            // 
+            // tbCode
+            // 
+            resources.ApplyResources(this.tbCode, "tbCode");
+            this.tbCode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbCode.Image = global::NotepadMDI.Properties.Resources.code_icon;
+            this.tbCode.Name = "tbCode";
+            this.tbCode.Click += new System.EventHandler(this.tbCode_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -353,6 +440,21 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+
+        private System.Windows.Forms.ToolStripButton tbCode;
+
+        private System.Windows.Forms.ToolStripButton tbColor;
+
+        private System.Windows.Forms.ToolStripButton tbFont;
+
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+
+        private System.Windows.Forms.ToolStripButton tbRAlignment;
+
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
 
         private System.Windows.Forms.ToolStripMenuItem insertImageToolStripMenuItem;
 
@@ -378,6 +480,12 @@
         private System.Windows.Forms.ToolStripButton tbCut;
 
         private System.Windows.Forms.ToolStripButton tbSave;
+
+        private System.Windows.Forms.ToolStripButton tbLAlignment;
+
+        private System.Windows.Forms.ToolStripButton tbCAlignment;
+
+        private System.Windows.Forms.ToolStripButton tbImage;
 
         private System.Windows.Forms.ToolStrip toolStripMain;
 

@@ -62,6 +62,36 @@ namespace NotepadMDI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap center_alignment_icon {
+            get {
+                object obj = ResourceManager.GetObject("center_alignment_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap code_icon {
+            get {
+                object obj = ResourceManager.GetObject("code_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap color_icon {
+            get {
+                object obj = ResourceManager.GetObject("color_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap copy_icon {
             get {
                 object obj = ResourceManager.GetObject("copy_icon", resourceCulture);
@@ -92,6 +122,36 @@ namespace NotepadMDI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap font_icon {
+            get {
+                object obj = ResourceManager.GetObject("font_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_icon {
+            get {
+                object obj = ResourceManager.GetObject("image_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_alignment_icon {
+            get {
+                object obj = ResourceManager.GetObject("left_alignment_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap open_icon {
             get {
                 object obj = ResourceManager.GetObject("open_icon", resourceCulture);
@@ -105,6 +165,16 @@ namespace NotepadMDI.Properties {
         internal static System.Drawing.Bitmap paste_icon {
             get {
                 object obj = ResourceManager.GetObject("paste_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_alignment_icon {
+            get {
+                object obj = ResourceManager.GetObject("right_alignment_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

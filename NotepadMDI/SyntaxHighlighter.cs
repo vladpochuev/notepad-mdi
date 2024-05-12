@@ -51,7 +51,7 @@ namespace NotepadMDI
             foreach (CSharpKeyword cSharpKeyword in Enum.GetValues(typeof(CSharpKeyword)))
             {
                 string keyword = cSharpKeyword.ToString();
-                string pattern = "(?<=(^|\\W|\\s))" + keyword + "(?=\\W|\\s)";
+                string pattern = "(?<=(^|\\s))" + keyword + "(?=$|\\s)";
 
                 MatchCollection matches = Regex.Matches(text, pattern);
 

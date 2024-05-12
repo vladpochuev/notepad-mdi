@@ -584,16 +584,67 @@
   <data name="tbPaste.Text" xml:space="preserve">
     <value>Paste</value>
   </data>
-  <data name="mainform_error_title" xml:space="preserve">
-    <value>Error</value>
+  <data name="tbLAlignment.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
   </data>
-  <data name="mainform_save_message" xml:space="preserve">
-    <value>Do you want to save changes in {0}?</value>
+  <data name="tbLAlignment.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
   </data>
-  <data name="mainform_save_title" xml:space="preserve">
-    <value>Save</value>
+  <data name="tbLAlignment.ToolTipText" xml:space="preserve">
+    <value>Left Alignment</value>
   </data>
-  <data name="mainform_wront_file_format" xml:space="preserve">
-    <value>Wrong file format</value>
+  <data name="tbCAlignment.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbCAlignment.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbCAlignment.ToolTipText" xml:space="preserve">
+    <value>Center Alignment</value>
+  </data>
+  <data name="tbRAlignment.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbRAlignment.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbRAlignment.ToolTipText" xml:space="preserve">
+    <value>Right Alignment</value>
+  </data>
+  <data name="tbFont.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbFont.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbFont.ToolTipText" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="tbColor.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbColor.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbColor.ToolTipText" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="tbImage.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbImage.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbImage.ToolTipText" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="tbCode.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbCode.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="tbCode.ToolTipText" xml:space="preserve">
+    <value>Code Block</value>
   </data>
 </root>
